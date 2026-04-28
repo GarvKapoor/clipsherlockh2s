@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 10000
 
 # Update this to your actual entry point (e.g., 'python main.py' or a gunicorn command)
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
