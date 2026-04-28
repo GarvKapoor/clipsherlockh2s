@@ -36,3 +36,4 @@ MANIFEST
 
 # Streamlit
 .streamlit/
+.DS_Store
