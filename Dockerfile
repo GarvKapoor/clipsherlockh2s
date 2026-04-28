@@ -20,4 +20,5 @@ COPY . .
 EXPOSE 10000
 
 # Update this to your actual entry point (e.g., 'python main.py' or a gunicorn command)
-CMD ["streamlit", "run", "app.py", "--server.port", "10000", "--server.address", "0.0.0.0"]
+# We use 'sh -c' to make sure the $PORT variable is correctly read as a number
+CMD sh -c "xvfb-run --server-args='-screen 0 1280x1024x24' streamlit run app.py --server.port $PORT --server.address 0.0.0.0"
